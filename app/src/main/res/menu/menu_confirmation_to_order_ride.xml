@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ojekkeren.ojekkeren.ConfirmationToOrderRide">
+    <item android:id="@+id/profiles" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/myorder" android:title="@string/action_myorder"
+        android:orderInCategory="100" />
+    <item android:id="@+id/actionLogin" android:title="@string/loginMenu"
+        android:orderInCategory="100" />
+    <item android:id="@+id/actionLogout" android:title="@string/action_logout"
+        android:orderInCategory="100" />
+    <item android:id="@+id/actionExit" android:title="@string/action_exit"
+        android:orderInCategory="100" />
+</menu>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="inside">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Main Page</title>
+	<link rel="stylesheet" href="bt/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div role="main" id="map-canvas">
+	</div>
+</div>
+
+	<!-- Footer -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-OkGXSpHVQJdvwZ7H4k_ziof5NW-Vx74&libraries=places&callback=initAutocomplete"></script>
+	<script type="text/javascript">
+	<!--document.getElementById('alamatanda').value=paramFromAct.getLat()+paramFromAct.getLng();-->
+	<!--var defaultLatLng = new google.maps.LatLng(paramFromAct.getLat(),paramFromAct.getLng());-->
+	var defaultLatLng = new google.maps.LatLng(-6.20876,106.846);
+	var myOptions = {
+		zoom: 15,
+		disableDefaultUI: true,
+		center: defaultLatLng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+	google.maps.event.trigger(map, "resize");
+	// Add an overlay to the map of current lat/lng
+	var marker = new google.maps.Marker({
+		position: defaultLatLng,
+		map: map,
+		animation: google.maps.Animation.DROP
+	});
+	</script>
+</body>
+</html>
+

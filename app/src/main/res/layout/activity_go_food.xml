@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ojekkeren.ojekkeren.GoFoodActivity"
+    android:background="#ffe0e0e0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:id="@+id/catbutt"
+                android:layout_weight="0.50"
+                android:background="#ff1fb218"
+                android:textColor="#ffffffff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Near Me"
+                android:id="@+id/nearmebutt"
+                android:layout_weight="0.50"
+                android:background="#fffaf3ff" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView4" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:background="#ffffffff">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/bestseller1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/lumpia"
+                        android:onClick="goToNearMe" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="2dp">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/bestseller2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/kumpilan"
+                        android:onClick="goToNearMe" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/bestseller3"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/burger"
+                            android:onClick="goToNearMe" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:padding="2dp">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/bestseller4"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/waffle"
+                            android:focusableInTouchMode="true"
+                            android:onClick="goToNearMe" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

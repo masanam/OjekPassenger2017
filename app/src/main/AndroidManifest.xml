@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ojekkeren.ojekkeren">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!--
+     To retrieve OAuth 2.0 tokens or invalidate tokens to disconnect a user. This disconnect
+     option is required to comply with the Google+ Sign-In developer policies
+    -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- To retrieve the account name (email) as part of sign-in: -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- End of copy. -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <!--meta-data
+            android:name="ServerAPI"
+            android:value="http://192.168.1.11/ojek" /-->
+
+        <meta-data
+            android:name="ServerAPI"
+            android:value="http://webtvasia.id/dashboard/api.php" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--
+            <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyB4l3QI3IaGb1ZFu0ysXAs4YF-EejxO85w" />
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD-OkGXSpHVQJdvwZ7H4k_ziof5NW-Vx74" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/halaman_awal" />
+        <activity
+            android:name=".GoRideMenu"
+            android:label="@string/title_activity_go_ride_menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".StarRatingDriver"
+            android:label="@string/title_activity_rate_star_driver" />
+        <activity
+            android:name=".ActWithFragment"
+            android:label="@string/title_activity_act_with_fragment" />
+        <activity
+            android:name=".ConfirmationToOrderRide"
+            android:label="@string/title_activity_confirmation_to_order_ride" />
+        <activity
+            android:name=".ChooserFromMap"
+            android:label="@string/title_activity_chooser_from_map" />
+        <activity
+            android:name=".ChooserToMap"
+            android:label="@string/title_activity_chooser_to_map" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="New Account">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LoginActivity" />
+        </activity>
+        <activity
+            android:name=".ConfirmPhoneNumber"
+            android:label="@string/title_activity_confirm_phone_number">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RegisterActivity" />
+        </activity>
+        <activity
+            android:name=".FinalConfirmationOrder"
+            android:label="@string/title_activity_final_confirmation_order">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ConfirmationToOrderRide" />
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name=".SendItemActivity"
+            android:label="@string/title_activity_send_item">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".GoFoodActivity"
+            android:label="@string/title_activity_go_food">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".NearMeActivity"
+            android:label="@string/title_activity_near_me">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".MenuQuantity"
+            android:label="@string/title_activity_menu_quantity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CheckoutFoodActivity"
+            android:label="@string/title_activity_checkout_food" />
+        <activity
+            android:name=".SettingAtivity"
+            android:label="@string/title_activity_setting_ativity" />
+        <activity
+            android:name=".ApiRequestActivity"
+            android:label="@string/title_activity_api_request"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".CobaActivity"
+            android:label="@string/title_activity_coba"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".ApiRequestActivityVer2"
+            android:label="@string/title_activity_api_request_activity_ver2"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".PlacePickerStart"
+            android:label="@string/title_activity_place_picker_rest_api"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PlacePickerDestination"
+            android:label="@string/title_activity_place_picker_rest_api"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PlacePicker2Activity"
+            android:label="@string/title_activity_place_picker2"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".ShowMapsResultChooserFromActivity"
+            android:label="@string/title_activity_show_maps_result_chooser_from"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+
+        <activity
+            android:name=".GoSendActivity"
+            android:label="@string/title_activity_go_send">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".PlacePickerSendActStart"
+            android:label="@string/title_activity_place_picker_send_act_start">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GoSendActivity" />
+        </activity>
+        <activity
+            android:name=".PlacePickerSendEndAct"
+            android:label="@string/title_activity_place_picker_send_end">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GoSendActivity" />
+        </activity>
+        <activity
+            android:name=".PlacePickerRideStart"
+            android:label="From..">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GoRideMenu" />
+        </activity>
+        <activity
+            android:name=".PlacePickerRideEnd"
+            android:label="Destination">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".GoRideMenu" />
+        </activity>
+        <activity android:name=".MyOrderActivity" />
+        <activity
+            android:name=".GoDelivery"
+            android:label="@string/title_activity_go_delivery" />
+        <activity
+            android:name=".DeliveryMenu"
+            android:label="Food Delivery">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FoodTokoDetail"
+            android:label="@string/title_activity_food_toko_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".GoFoodDelivery" />
+        <activity android:name=".GoFoodDeliveryChooserToMap" />
+        <activity
+            android:name=".Orders"
+            android:label="Orders Info">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <service
+            android:name=".CheckDriverSeatService"
+            android:exported="false">
+        </service>
+    </application>
+
+</manifest>

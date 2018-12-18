@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="inside">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Main Page</title>
+	<link rel="stylesheet" href="bt/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12"><h1 class="logo" style="color:green;">LOKASI ANDA</h1></div>
+		</div>
+		<div class="row margin-10">
+			<div class="col-xs-12 col-sm-12">
+				<div role="main" id="map-canvas">
+				</div>
+			</div>
+		</div>
+		<!-- <div class="row margin-30">
+			<div class="col-xs-6 col-sm-6"><strong>Alamat :</strong></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12"><input type="text" name="lokasi" /></div>
+		</div>
+
+		<div class="row margin-30">
+			<div class="col-xs-6 col-sm-6"><strong>Tujuan :</strong></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12"><input type="text" name="tujuan" /></div>
+		</div>
+ -->
+ 		<div class="row margin-30">
+			<div class="col-xs-12 col-sm-12"><h1 class="logo" style="color:green;">Alamat Anda</h1></div>
+		</div>
+		<div class="row margin-10">
+			<div class="col-xs-12 col-sm-12">
+				<input type="text" style="border:0;border-bottom:1px solid #ccc;padding:10px;width:90%" name="alamatanda" id="alamatanda" />
+			</div>
+		</div>
+		<div class="row margin-30">
+			<div class="col-xs-12 col-sm-12"><h1 class="logo" style="color:green;">Tujuan</h1></div>
+		</div>
+		<div class="row margin-10">
+			<div class="col-xs-12 col-sm-12"><input type="text" style="border:0;border-bottom:1px solid #ccc;padding:10px;width:90%" name="alamattujuan" id="alamattujuan" /></div>
+		</div>
+		<div class="row margin-30">
+			<div class="col-xs-12 col-sm-12"><h1 class="logo" style="color:green;">Jenis Barang</h1></div>
+		</div>
+		<div class="row margin-10">
+			<div class="col-xs-12 col-sm-12"><input type="text" style="border:0;border-bottom:1px solid #ccc;padding:10px;width:90%" name="jenisbarang" id="jenisbarang" /></div>
+		</div>
+		<div class="row margin-30">
+			<div class="col-xs-6 col-sm-6"><center><a class="btn btn-info btn-lg" href="main.html" role="button" style="padding:20px;">< Previous</a></a></center></div>
+			<div class="col-xs-6 col-sm-6"><center><a class="btn btn-warning btn-lg" href="#" role="button" style="padding:20px;">Submit Order</a></center></div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript">
+	var defaultLatLng = new google.maps.LatLng(-6.197645,106.818519);
+	var myOptions = {
+		zoom: 15,
+		disableDefaultUI: true,
+		center: defaultLatLng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+	google.maps.event.trigger(map, "resize");
+	// Add an overlay to the map of current lat/lng
+	var marker = new google.maps.Marker({
+		position: defaultLatLng,
+		map: map,
+		animation: google.maps.Animation.DROP
+	});
+	
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,752 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="ojekkeren.ojekkeren.NearMeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:id="@+id/catbutt"
+                android:layout_weight="0.50"
+                android:background="#fffaf3ff" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Near Me"
+                android:id="@+id/nearmebutt"
+                android:layout_weight="0.50"
+                android:background="#ff1fb218"
+                android:textColor="#ffffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:padding="5dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchnearme"
+                android:layout_weight="1"
+                android:hint="Search Restauran / Warung"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView4" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:background="#ffffffff">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:id="@+id/map"
+                        tools:context="ojekkeren.ojekkeren.GoRideMenu"
+                        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"></LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView12"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger King Kong"
+                                android:id="@+id/textView19"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView20"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView13"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger Bang Kim"
+                                android:id="@+id/textView21"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView22"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView12"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger King Kong"
+                                android:id="@+id/textView19"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView20"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView13"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger Bang Kim"
+                                android:id="@+id/textView21"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView22"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView12"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger King Kong"
+                                android:id="@+id/textView19"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView20"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView13"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger Bang Kim"
+                                android:id="@+id/textView21"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView22"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView12"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger King Kong"
+                                android:id="@+id/textView19"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView20"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView13"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger Bang Kim"
+                                android:id="@+id/textView21"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView22"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView12"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger King Kong"
+                                android:id="@+id/textView19"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView20"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView13"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger Bang Kim"
+                                android:id="@+id/textView21"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView22"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1"
+                    android:layout_weight="0.50" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView12"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger King Kong"
+                                android:id="@+id/textView19"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView20"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:padding="2dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/imageView13"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/burger" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Burger Bang Kim"
+                                android:id="@+id/textView21"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:text="Jalan Matraman Jakarta Pusat, DKI Jakarta"
+                                android:id="@+id/textView22"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

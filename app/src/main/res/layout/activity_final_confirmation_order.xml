@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ojekkeren.ojekkeren.FinalConfirmationOrder">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:background="#ffffffff"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:gravity="center_vertical|center|center_horizontal"
+            android:background="#ffffffff">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2"
+                android:src="@drawable/logoatas"
+                android:paddingTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Trying to find a driver.Will notify you shortly"
+                android:id="@+id/textView8"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back to Dashboard"
+                android:id="@+id/gobackindex" />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <fragment android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/map"
+                tools:context="ojekkeren.ojekkeren.GoRideMenu"
+                android:name="com.google.android.gms.maps.SupportMapFragment" >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/DriverInfo"
+                    android:visibility="gone"
+                    android:text="Driver Name: .. 1 \nVehicle : ..2"
+                    android:minLines="3"
+                    android:padding="20dp"
+                    android:layout_marginTop="250dp"
+                    android:background="#138d0f"
+                    android:textColor="#fdfdfe" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:visibility="gone"
+                    android:layout_marginTop="350dp"
+                    android:background="#ccc"
+                    android:id="@+id/callLay">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:id="@+id/imageCancel"
+                        android:src="@drawable/cancel" />
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="50dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/imageComplete"
+                        android:src="@drawable/complete" />
+
+                </LinearLayout>
+
+            </fragment>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

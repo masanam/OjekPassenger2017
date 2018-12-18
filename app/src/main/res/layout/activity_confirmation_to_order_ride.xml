@@ -1,0 +1,336 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="ojekkeren.ojekkeren.ConfirmationToOrderRide">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView2"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center|center_horizontal"
+                android:background="#ffffffff">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/logoatas"
+                    android:paddingTop="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:background="#ffffffff"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Start location :"
+                    android:id="@+id/labelLocation"
+                    android:layout_weight="1"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:padding="10dp"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Mall Taman Anggrek"
+                    android:id="@+id/startAddress"
+                    android:textColor="#ff908e92" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="0dp"
+                android:layout_marginTop="5dp"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Destination :"
+                    android:id="@+id/textView10"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:padding="10dp"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Stat Manggarai"
+                    android:id="@+id/destAddress"
+                    android:textColor="#ff908e92" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Distance , Duration &amp; Total Cost:"
+                    android:id="@+id/textView14"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:padding="10dp"
+                android:background="#ffffffff">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="15Km"
+                    android:id="@+id/distance"
+                    android:textColor="#ff908e92" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="0dp"
+                android:background="#ffffffff"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Price :"
+                    android:id="@+id/textView15"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:background="#ffffffff"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:padding="10dp"
+                android:background="#ffffffff"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Rp. 12.000"
+                    android:id="@+id/price"
+                    android:textColor="#ff2ea91b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:id="@+id/boxitemdeliver1"
+                android:paddingTop="0dp"
+                android:background="#ffffffff"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Items To Deliver :"
+                    android:id="@+id/textView18"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:background="#ffffffff"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:id="@+id/boxitemdeliver2"
+                android:padding="10dp"
+                android:background="#ffffffff" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="-"
+                    android:id="@+id/ItemToDeliver"
+                    android:textColor="#ff2ea91b" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:id="@+id/boxspinner1"
+                android:paddingTop="0dp"
+                android:background="#ffffffff"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Payment Type :"
+                    android:id="@+id/textView19"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:background="#ffffffff"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:id="@+id/boxspinner2"
+                android:padding="10dp"
+                android:background="#ffffffff" >
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="20sp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/Base.Widget.AppCompat.DropDownItem.Spinner"
+                    android:touchscreenBlocksFocus="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:paddingLeft="10dp"
+                android:id="@+id/boxspinner4"
+                android:paddingTop="0dp"
+                android:background="#ffffffff"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Passenger :"
+                    android:id="@+id/textView29"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:background="#ffffffff"
+                    android:paddingTop="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:id="@+id/boxspinner3"
+                android:padding="10dp"
+                android:background="#ffffffff" >
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:textSize="20sp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/toFinalConfirmationOrder"
+                    android:src="@drawable/booknowbutton"
+                    android:background="#f9f9f9"
+                    android:alpha="0.8" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
